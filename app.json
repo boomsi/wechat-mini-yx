@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/topic/topic",
+    "pages/catelog/catelog",
+    "pages/cart/cart",
+    "pages/ucenter/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "严选商城",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color":"#666",
+    "selectedColor": "#ce7175",
+    "borderStyle": "white",
+    "backgroundColor": "#fafafa",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "static/images/ic_menu_choice_nor.png",
+      "selectedIconPath": "static/images/ic_menu_choice_pressed.png"
+    },
+    {
+      "pagePath": "pages/topic/topic",
+      "text": "专题",
+      "iconPath": "static/images/ic_menu_topic_nor.png",
+      "selectedIconPath": "static/images/ic_menu_topic_pressed.png"
+    },
+    {
+      "pagePath": "pages/catelog/catelog",
+      "text": "分类",
+      "iconPath": "static/images/ic_menu_sort_nor.png",
+      "selectedIconPath": "static/images/ic_menu_sort_pressed.png"
+    },
+    {
+      "pagePath": "pages/cart/cart",
+      "text": "购物车",
+      "iconPath": "static/images/ic_menu_shoping_nor.png",
+      "selectedIconPath": "static/images/ic_menu_shoping_pressed.png"
+    },
+    {
+      "pagePath": "pages/ucenter/index/index",
+      "text": "我的",
+      "iconPath": "static/images/ic_menu_me_nor.png",
+      "selectedIconPath": "static/images/ic_menu_me_pressed.png"
+    }]
+  }
+}

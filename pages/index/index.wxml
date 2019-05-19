@@ -1,0 +1,119 @@
+<view class="container">
+  <view class='search'>
+    <navigator class='input'>
+      <image class='icon'></image>
+      <text>商品搜索，供239款好物</text>
+    </navigator>
+  </view>
+  <view class='swiper'>
+    <swiper indicator-dots="{{ true }}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" circular="{{true}}">
+      <swiper-item wx:for="{{imgUrls}}" wx:key="{{item}}">
+        <navigator>
+          <image src="{{item}}" class="slide-image" />
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class='banner'>
+    <navigator class='banner-item'>
+      <view>
+        <image src='http://ac-3yr0g9cz.clouddn.com/c031ea3cf575f885cd1c.png'></image>
+        <text>居家</text>
+      </view>
+    </navigator>
+    <navigator class='banner-item'>
+      <view>
+        <image></image>
+        <text>餐厨</text>
+      </view>
+    </navigator>
+    <navigator class='banner-item'>
+      <view>
+        <image></image>
+        <text>配件</text>
+      </view>
+    </navigator>
+    <navigator class='banner-item'>
+      <view>
+        <image></image>
+        <text>服装</text>
+      </view>
+    </navigator>
+    <navigator class='banner-item'>
+      <view>
+        <image></image>
+        <text>志趣</text>
+      </view>
+    </navigator>
+  </view>
+  <view class='a-select'>
+    <view class='txt'>
+      <text>品牌制造商直供</text>
+    </view>
+    <view class='txt-goods'>
+      <navigator class='a-select-item'>
+        <image src='http://yanxuan.nosdn.127.net/76638fb8e6990aadf837ce761c3b7399.jpg'></image>
+        <view class='mt'>
+          <text class='brand'>CK制造商</text>
+          <text class='price'>99元起</text>
+        </view>
+      </navigator>
+      <navigator class='a-select-item'>
+        <image src='http://yanxuan.nosdn.127.net/4ea3f1e60dd77c45c218e503d721a1ed.jpg'></image>
+        <view class='mt'>
+          <text class='brand'>CK制造商</text>
+          <text class='price'>99元起</text>
+        </view>
+      </navigator>
+      <navigator class='a-select-item'>
+        <image src='http://yanxuan.nosdn.127.net/4ea3f1e60dd77c45c218e503d721a1ed.jpg'></image>
+        <view class='mt'>
+          <text class='brand'>CK制造商</text>
+          <text class='price'>99元起</text>
+        </view>
+      </navigator>
+      <navigator class='a-select-item'>
+        <image src='http://yanxuan.nosdn.127.net/76638fb8e6990aadf837ce761c3b7399.jpg'></image>
+        <view class='mt'>
+          <text class='brand'>CK制造商</text>
+          <text class='price'>99元起</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class='b-select'>
+    <view class='txt'>
+      <text>周一周四·新品首发</text>
+    </view>
+    <view class='txt-goods'>
+      <navigator class='b-select-item'>
+        <image src='http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png'></image>
+        <view class='mt'>
+          <text class='b-select-name'>蔓越莓曲奇200g</text>
+          <text class='b-select-price'>￥36</text>
+        </view>
+      </navigator>
+      <navigator class='b-select-item'>
+        <image src='http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png'></image>
+        <view class='mt'>
+          <text class='b-select-name'>蔓越莓曲奇200g</text>
+          <text class='b-select-price'>￥36</text>
+        </view>
+      </navigator>
+      <navigator class='b-select-item'>
+        <image src='http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png'></image>
+        <view class='mt'>
+          <text class='b-select-name'>蔓越莓曲奇200g</text>
+          <text class='b-select-price'>￥36</text>
+        </view>
+      </navigator>
+      <navigator class='b-select-item'>
+        <image src='http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png'></image>
+        <view class='mt'>
+          <text class='b-select-name'>蔓越莓曲奇200g</text>
+          <text class='b-select-price'>￥36</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
