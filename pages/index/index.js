@@ -1,46 +1,39 @@
+const api = require('../../api/api.js')
+const tools = require('../../tools/tools.js')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgUrls: [
-      'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-      'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
-      'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
-    ],
-    indicatorDots: false,
-    autoplay: false,
-    interval: 5000,
-    duration: 1000
-  },
-  //swiper函数
-  changeIndicatorDots(e) {
-    this.setData({
-      indicatorDots: !this.data.indicatorDots
-    })
-  },
-  changeAutoplay(e) {
-    this.setData({
-      autoplay: !this.data.autoplay
-    })
-  },
-  intervalChange(e) {
-    this.setData({
-      interval: e.detail.value
-    })
-  },
-  durationChange(e) {
-    this.setData({
-      duration: e.detail.value
-    })
+    goodsCount: 0,
+    newGoods: [],
+    hotGoods: [],
+    topics: [],
+    brands: [],
+    floorGoods: [],
+    banner: [],
+    channel: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    tools.promise(api.indexUrl, 'GET', {})
+    .then(res => {
+      console.log(res)
+      this.setData({
+        newGoods: res.data.data.newGoodsList,
+        hotGoods: res.data.data.hotGoodsList,
+        topics: res.data.data.topicList,
+        brand: res.data.data.brandList,
+        floorGoods: res.data.data.categoryList,
+        banner: res.data.data.banner,
+        channel: res.data.data.channel
+      })
+    })
   },
 
   /**

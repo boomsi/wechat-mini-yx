@@ -7,42 +7,18 @@
   </view>
   <view class='swiper'>
     <swiper indicator-dots="{{ true }}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" circular="{{true}}">
-      <swiper-item wx:for="{{imgUrls}}" wx:key="{{item}}">
+      <swiper-item wx:for="{{banner}}" wx:key="{{item.id}}">
         <navigator>
-          <image src="{{item}}" class="slide-image" />
+          <image src="{{item.image_url}}" class="slide-image" />
         </navigator>
       </swiper-item>
     </swiper>
   </view>
   <view class='banner'>
-    <navigator class='banner-item'>
+    <navigator class='banner-item' wx:for="{{channel}}" wx:key="item.id">
       <view>
-        <image src='http://ac-3yr0g9cz.clouddn.com/c031ea3cf575f885cd1c.png'></image>
-        <text>居家</text>
-      </view>
-    </navigator>
-    <navigator class='banner-item'>
-      <view>
-        <image></image>
-        <text>餐厨</text>
-      </view>
-    </navigator>
-    <navigator class='banner-item'>
-      <view>
-        <image></image>
-        <text>配件</text>
-      </view>
-    </navigator>
-    <navigator class='banner-item'>
-      <view>
-        <image></image>
-        <text>服装</text>
-      </view>
-    </navigator>
-    <navigator class='banner-item'>
-      <view>
-        <image></image>
-        <text>志趣</text>
+        <image src='../../static/icon/jj.png'></image>
+        <text>{{item.name}}</text>
       </view>
     </navigator>
   </view>
@@ -51,32 +27,11 @@
       <text>品牌制造商直供</text>
     </view>
     <view class='txt-goods'>
-      <navigator class='a-select-item'>
-        <image src='http://yanxuan.nosdn.127.net/76638fb8e6990aadf837ce761c3b7399.jpg'></image>
+      <navigator class='a-select-item' wx:for="{{brand}}" wx:key="{{item.id}}">
+        <image src='{{ item.new_pic_url }}'></image>
         <view class='mt'>
-          <text class='brand'>CK制造商</text>
-          <text class='price'>99元起</text>
-        </view>
-      </navigator>
-      <navigator class='a-select-item'>
-        <image src='http://yanxuan.nosdn.127.net/4ea3f1e60dd77c45c218e503d721a1ed.jpg'></image>
-        <view class='mt'>
-          <text class='brand'>CK制造商</text>
-          <text class='price'>99元起</text>
-        </view>
-      </navigator>
-      <navigator class='a-select-item'>
-        <image src='http://yanxuan.nosdn.127.net/4ea3f1e60dd77c45c218e503d721a1ed.jpg'></image>
-        <view class='mt'>
-          <text class='brand'>CK制造商</text>
-          <text class='price'>99元起</text>
-        </view>
-      </navigator>
-      <navigator class='a-select-item'>
-        <image src='http://yanxuan.nosdn.127.net/76638fb8e6990aadf837ce761c3b7399.jpg'></image>
-        <view class='mt'>
-          <text class='brand'>CK制造商</text>
-          <text class='price'>99元起</text>
+          <text class='brand'>{{ item.name }}</text>
+          <text class='price'>{{ item.floor_price }}元起</text>
         </view>
       </navigator>
     </view>
@@ -86,34 +41,59 @@
       <text>周一周四·新品首发</text>
     </view>
     <view class='txt-goods'>
-      <navigator class='b-select-item'>
-        <image src='http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png'></image>
+      <navigator class='b-select-item' wx:for="{{newGoods}}" wx:key="{{item.id}}">
+        <image src='{{item.list_pic_url}}'></image>
         <view class='mt'>
-          <text class='b-select-name'>蔓越莓曲奇200g</text>
-          <text class='b-select-price'>￥36</text>
+          <text class='b-select-name'>{{item.name}}</text>
+          <text class='b-select-price'>￥{{item.retail_price}}</text>
         </view>
       </navigator>
-      <navigator class='b-select-item'>
-        <image src='http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png'></image>
-        <view class='mt'>
-          <text class='b-select-name'>蔓越莓曲奇200g</text>
-          <text class='b-select-price'>￥36</text>
+    </view>
+  </view>
+  <view class='c-select'>
+    <view class='txt'>
+      <text>人气推荐</text>
+    </view>
+    <view class='c-select-item'>
+      <navigator wx:for="{{hotGoods}}" wx:key="{{item.id}}">
+        <image src='{{item.list_pic_url}}'></image>
+        <view class='c-select-text'>
+          <text class='title'>{{item.name}}</text>
+          <text class='detail'>{{item.goods_brief}}</text>
+          <text class='price'>￥{{item.retail_price}}</text>
         </view>
       </navigator>
-      <navigator class='b-select-item'>
-        <image src='http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png'></image>
-        <view class='mt'>
-          <text class='b-select-name'>蔓越莓曲奇200g</text>
-          <text class='b-select-price'>￥36</text>
+    </view>
+  </view>
+  <view class='d-select'>
+    <view class='txt'>
+      <text>专题精选</text>
+    </view>
+    <view class='d-select-item'>
+      <navigator wx:for="{{topics}}" wx:key="{{item.id}}">
+        <image src='{{item.item_pic_url}}'></image>
+        <view class='d-select-text'>
+          <text class='title'>{{item.title}}<text class='price'>￥{{item.price_info}}元起</text></text>
+          <text class='detail'>{{item.subtitle}}</text>
         </view>
       </navigator>
-      <navigator class='b-select-item'>
-        <image src='http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png'></image>
-        <view class='mt'>
-          <text class='b-select-name'>蔓越莓曲奇200g</text>
-          <text class='b-select-price'>￥36</text>
-        </view>
-      </navigator>
+    </view>
+  </view>
+  <!-- 循环数据 -->
+  <view class='circulate-select' wx:for="{{floorGoods}}" wx:key="{{item.id}}">
+    <view class='e-select'>
+      <view class='txt'>
+        <text>{{item.name}}</text>
+      </view>
+      <view class='e-select-item'>
+        <navigator wx:for="{{item.goodsList}}" wx:key="{{item.id}}">
+          <image src='{{item.list_pic_url}}'></image>
+          <view class='e-select-text'>
+            <text class='title'>{{item.name}}</text>
+            <text class='price'>￥{{item.retail_price}}</text>
+          </view>
+        </navigator>
+      </view>
     </view>
   </view>
 </view>
