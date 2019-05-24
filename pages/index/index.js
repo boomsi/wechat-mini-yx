@@ -23,7 +23,7 @@ Page({
   onLoad: function (options) {
     tools.promise(api.indexUrl, 'GET', {})
     .then(res => {
-      console.log(res)
+      // console.log(res)
       this.setData({
         newGoods: res.data.data.newGoodsList,
         hotGoods: res.data.data.hotGoodsList,
@@ -33,21 +33,26 @@ Page({
         banner: res.data.data.banner,
         channel: res.data.data.channel
       })
+    }),
+    wx.showLoading({
+      title: '加载中',
+      mask: true
     })
+    // wx.showNavigationBarLoading()
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+    wx.hideLoading()
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+ 
   },
 
   /**

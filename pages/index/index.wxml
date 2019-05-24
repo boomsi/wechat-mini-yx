@@ -9,7 +9,7 @@
     <swiper indicator-dots="{{ true }}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" circular="{{true}}">
       <swiper-item wx:for="{{banner}}" wx:key="{{item.id}}">
         <navigator>
-          <image src="{{item.image_url}}" class="slide-image" />
+          <image src="{{item.image_url}}" class="slide-image"  lazy-load='{{true}}' mode='aspectFill'/>
         </navigator>
       </swiper-item>
     </swiper>
@@ -28,7 +28,7 @@
     </view>
     <view class='txt-goods'>
       <navigator class='a-select-item' wx:for="{{brand}}" wx:key="{{item.id}}">
-        <image src='{{ item.new_pic_url }}'></image>
+        <image src='{{ item.new_pic_url }}' lazy-load='{{true}}' mode='aspectFill'></image>
         <view class='mt'>
           <text class='brand'>{{ item.name }}</text>
           <text class='price'>{{ item.floor_price }}元起</text>
@@ -42,7 +42,7 @@
     </view>
     <view class='txt-goods'>
       <navigator class='b-select-item' wx:for="{{newGoods}}" wx:key="{{item.id}}">
-        <image src='{{item.list_pic_url}}'></image>
+        <image src='{{item.list_pic_url}}' lazy-load='{{true}}' mode='aspectFill'></image>
         <view class='mt'>
           <text class='b-select-name'>{{item.name}}</text>
           <text class='b-select-price'>￥{{item.retail_price}}</text>
@@ -56,7 +56,7 @@
     </view>
     <view class='c-select-item'>
       <navigator wx:for="{{hotGoods}}" wx:key="{{item.id}}">
-        <image src='{{item.list_pic_url}}'></image>
+        <image src='{{item.list_pic_url}}' lazy-load='{{true}}' mode='aspectFill'></image>
         <view class='c-select-text'>
           <text class='title'>{{item.name}}</text>
           <text class='detail'>{{item.goods_brief}}</text>
@@ -71,7 +71,7 @@
     </view>
     <view class='d-select-item'>
       <navigator wx:for="{{topics}}" wx:key="{{item.id}}">
-        <image src='{{item.item_pic_url}}'></image>
+        <image src='{{item.item_pic_url}}' lazy-load='{{true}}' mode='aspectFill'></image>
         <view class='d-select-text'>
           <text class='title'>{{item.title}}<text class='price'>￥{{item.price_info}}元起</text></text>
           <text class='detail'>{{item.subtitle}}</text>
@@ -87,7 +87,7 @@
       </view>
       <view class='e-select-item'>
         <navigator wx:for="{{item.goodsList}}" wx:key="{{item.id}}">
-          <image src='{{item.list_pic_url}}'></image>
+          <image src='{{item.list_pic_url}}' lazy-load='{{true}}' mode='aspectFill'></image>
           <view class='e-select-text'>
             <text class='title'>{{item.name}}</text>
             <text class='price'>￥{{item.retail_price}}</text>

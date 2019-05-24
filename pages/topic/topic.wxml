@@ -1,2 +1,10 @@
-<!--pages/topic/topic.wxml-->
-<text>pages/topic/topic.wxml</text>
+<view class='container'>
+  <view class='slider-item'>
+    <navigator wx:for="{{topicList}}" wx:key="{{item.id}}">
+      <image src='{{item.scene_pic_url}}'  mode='aspectFill' lazy-load='{{true}}'></image>
+      <text class='slider-title'>{{item.title}}</text>
+      <text class='slider-detail'>{{item.subtitle}}</text>
+      <text class='slider-price'>{{item.price_info}}元起</text>
+    </navigator>
+  </view>
+</view>
