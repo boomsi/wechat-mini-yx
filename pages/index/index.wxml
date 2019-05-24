@@ -1,6 +1,6 @@
 <view class="container">
   <view class='search'>
-    <navigator class='input'>
+    <navigator class='input' url='/pages/search/search'>
       <image class='icon'></image>
       <text>商品搜索，供239款好物</text>
     </navigator>

@@ -1,2 +1,30 @@
-<!--pages/catelog/catelog.wxml-->
-<text>pages/catelog/catelog.wxml</text>
+<view class='conatiner'>
+  <view class='search'>
+    <navigator class='input'>
+      <image class='icon'></image>
+      <text>商品搜索，供239款好物</text>
+    </navigator>
+  </view>
+  <view class='content'>
+    <view class='content-left'>
+      <text wx:for="{{itemList}}" wx:key="{{item.id}}" class="{{showList.id === item.id ? 'active' : ''}}" data-id="{{item.id}}" bindtap='changeItem'>{{item.name}}</text>
+    </view>
+    <scroll-view class='content-right'>
+      <navigator>
+        <view class='catelog-top'>
+          <image src='{{showList.wap_banner_url}}' mode=''></image>
+          <text>{{showList.front_desc}}</text>
+        </view>
+      </navigator>
+      <view class='catelog-name'>
+        <text>{{showList.name}}分类</text>
+      </view>
+      <view class='catelog-item'>
+        <navigator wx:for="{{showList.subCategoryList}}" wx:key="item.id">
+          <image src='{{item.wap_banner_url}}'></image>
+          <text>{{item.name}}</text>
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+</view>

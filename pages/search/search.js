@@ -1,24 +1,30 @@
-const api = require('../../../api/api.js')
-const tools = require('../../../tools/tools.js')
-
-// pages/ucenter/index/index.js
+const api = require('../../api/api.js')
+const tools = require('../../tools/tools.js')
+// pages/search/search.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    defaultKeyword: [],
+    historyKeywordList: [],
+    hotKeywordList: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // tools.promise(tools.url, 'GET', {})
-    // .then(res => {
-    //   console.log(res)
-    // })
+    tools.promise(api.searchIndexUrl, 'GET', {})
+    .then(res => {
+      this.setData({
+        defaultKeyword: res.data.data.defaultKeyword,
+        historyKeywordList: res.data.data.historyKeywordList,
+        hotKeywordList: res.data.data.hotKeywordList
+      })
+      console.log(this.data.hotKeywordList)
+    })
   },
 
   /**

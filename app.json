@@ -4,7 +4,8 @@
     "pages/topic/topic",
     "pages/catelog/catelog",
     "pages/cart/cart",
-    "pages/ucenter/index/index"
+    "pages/ucenter/index/index",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "dark",

@@ -1,2 +1,55 @@
-<!--pages/ucenter/index/index.wxml-->
-<text>pages/ucenter/index/index.wxml</text>
+<view class='container'>
+  <view class='center-top'>
+    <image class='head-img' src='http://yanxuan.nosdn.127.net/8945ae63d940cc42406c3f67019c5cb6.png'></image>
+    <text>点击登录</text>
+    <image class='head-more' src='/static/images/address_right.png'></image>
+  </view>
+  <view class='center-item'>
+    <navigator>
+      <image src='../../../static/center/wddd.png'></image>
+      <text class='txt'>我的订单</text>
+    </navigator>
+    <navigator>
+      <image src='../../../static/center/yhq.png'></image>
+      <text class='txt'>优惠券</text>
+    </navigator>
+    <navigator>
+      <image src='../../../static/center/lpk.png'></image>
+      <text class='txt'>礼品卡</text>
+    </navigator>
+    <navigator>
+      <image src='../../../static/center/wdsc.png'></image>
+      <text class='txt'>我的收藏</text>
+    </navigator>
+    <navigator>
+      <image src='../../../static/center/wdzj.png'></image>
+      <text class='txt'>我的足迹</text>
+    </navigator>
+    <navigator>
+      <image src='../../../static/center/hyfl.png'></image>
+      <text class='txt'>会员福利</text>
+    </navigator>
+    <navigator>
+      <image src='../../../static/center/dzgl.png'></image>
+      <text class='txt'>地址管理</text>
+    </navigator>
+    <navigator>
+      <image src='../../../static/center/zhaq.png'></image>
+      <text class='txt'>账号安全</text>
+    </navigator>
+    <navigator>
+      <image src='../../../static/center/lxkf.png'></image>
+      <text class='txt'>联系客服</text>
+    </navigator>
+    <navigator>
+      <image src='../../../static/center/bzzx.png'></image>
+      <text class='txt'>帮助中心</text>
+    </navigator>
+    <navigator>
+      <image src='../../../static/center/yjfk.png'></image>
+      <text class='txt'>意见反馈</text>
+    </navigator>
+    <navigator>
+    </navigator>
+  </view>
+</view>

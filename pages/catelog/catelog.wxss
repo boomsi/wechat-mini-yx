@@ -1,1 +1,112 @@
-/* pages/catelog/catelog.wxss */
+.search {
+  display: flex;
+  justify-content: center;
+  padding: 20rpx 0;
+  color: #666;
+  font-size: 14px;
+  background-color: #fff;
+}
+.search .input {
+  background-color: #ededed;
+  height: 56rpx;
+  width: 90%;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search .icon {
+  background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/search2-2fb94833aa.png) center no-repeat;
+  width: 28rpx;
+  height: 28rpx;
+  background-size: 100%;
+  margin-right: 10rpx;
+}
+.content {
+  padding: 0 40rpx 0 0;
+  border-top: 1rpx solid #eee;
+  display: flex;
+}
+.content-left {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content-left text {
+  line-height: 44px;
+  font-size: 14px;
+  position: relative;
+}
+
+.content-left .active {
+  color: #ab2b2b;
+  font-size: 17px;
+}
+.content-left .active ::before {
+  content: "";
+  display: inline-block;
+  width: 8rpx;
+  height: 44px;
+  background-color:#ab2b2b;
+  position: absolute;
+  left: -60rpx;
+}
+
+.content-right {
+  width: 0;
+  flex-grow: 8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40rpx 0 0 40rpx;
+  border-left: 1rpx solid #ccc;
+}
+.catelog-top {
+  position: relative;
+}
+.catelog-top text{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: #fff;
+}
+.catelog-top image {
+  width: 100%;
+  height: 192rpx;
+}
+.catelog-name {
+  text-align: center;
+}
+.catelog-name text {
+  line-height: 30px;
+  font-size: 12px;
+}
+.catelog-name text::before,
+.catelog-name text::after {
+  content: "——";
+  color: #ccc;
+  padding: 0 10rpx;
+}
+.catelog-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+.catelog-item image {
+  width: 144rpx;
+  height: 144rpx;
+}
+.catelog-item navigator {
+  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.catelog-item navigator text {
+  font-size: 12px;
+  color: #333;
+}

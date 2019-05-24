@@ -1,0 +1,24 @@
+<view class='container'>
+  <view class='search'>
+    <image class='icon' src='http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/search2-2fb94833aa.png'></image>
+    <input placeholder='{{defaultKeyword.keyword}}'></input>
+    <navigator>
+      <text>取消</text>
+    </navigator>
+  </view>
+  <view class='search-history' wx:if='{{historyKeywordList.length !== 0}}'>
+    <view class='history-box'>
+      <text class='title'>历史记录</text>
+      <image src='http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/del1-93f0a4add4.png'></image>
+    </view>
+    <view class='history-result'>
+      <view wx:for="{{historyKeywordList}}" wx:key="{{item.keyword}}">{{item.keyword}}</view>
+    </view>
+  </view>
+  <view class='search-hot'>
+    <text class='title'>热门搜索</text>
+    <view class='history-result'>
+      <view wx:for="{{hotKeywordList}}" wx:key="{{item.keyword}}" class="{{item.is_hot === 1 ? 'hot-search' : ''}}">{{item.keyword}}</view>
+    </view>
+  </view>
+</view>
