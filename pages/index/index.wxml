@@ -2,7 +2,7 @@
   <view class='search'>
     <navigator class='input' url='/pages/search/search'>
       <image class='icon'></image>
-      <text>商品搜索，供239款好物</text>
+      <text>商品搜索，供{{goodsCount}}款好物</text>
     </navigator>
   </view>
   <view class='swiper'>
@@ -15,7 +15,7 @@
     </swiper>
   </view>
   <view class='banner'>
-    <navigator class='banner-item' wx:for="{{channel}}" wx:key="item.id">
+    <navigator class='banner-item' url='{{item.url}}' wx:for="{{channel}}" wx:key="item.id">
       <view>
         <image src='../../static/icon/jj.png'></image>
         <text>{{item.name}}</text>

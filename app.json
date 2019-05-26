@@ -5,7 +5,9 @@
     "pages/catelog/catelog",
     "pages/cart/cart",
     "pages/ucenter/index/index",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/category/category",
+    "pages/goods/goods"
   ],
   "window": {
     "backgroundTextStyle": "dark",

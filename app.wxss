@@ -3,3 +3,21 @@
   box-sizing: border-box;
   background-color: #f4f4f4;
 }
+.price {
+  color: #b42e36;
+}
+/* 右箭头 */
+.right::after {
+  content: "";
+  display: inline-block;
+  width: 20rpx;
+  height: 20rpx;
+  border: 2rpx solid #666;
+  position: absolute;
+  right: 30rpx;
+  border-left-color: transparent; 
+  border-bottom-color: transparent; 
+  vertical-align: middle;
+  top: 50%;
+  transform: rotate(45deg) translateY(-50%);
+}

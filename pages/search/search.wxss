@@ -58,7 +58,9 @@
 .search-history .history-result view,
 .search-hot .history-result view {
   font-size: 14px;
-  padding: 6rpx 10rpx;
+  padding: 0 10rpx;
+  line-height: 52rpx;
+  height: 52rpx;
   margin-right: 20rpx;
   margin-bottom: 20rpx;
   border: 2rpx solid #999;
@@ -67,4 +69,17 @@
 .hot-search {
   border-color: red !important;
   color: red !important;
+}
+.search-result {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #333;
+}
+.search-result image {
+  width: 240rpx;
+  height: 240rpx;
 }

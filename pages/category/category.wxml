@@ -1,0 +1,18 @@
+<view class='container'>
+  <scroll-view class='header' scroll-x="{{true}}">
+    <view class="{{item.id == id ? 'active' : ''}}" wx:for="{{titleList}}" wx:key="{{item.id}}" data-id="{{item.id}}" bindtap='changeItem'>{{item.name}}</view>
+  </scroll-view>
+  <view class='title'>
+    <text class='title-big'>{{showList.name}}</text>
+    <text class='title-small'>{{showList.front_desc}}</text>
+  </view>
+  <view class='goods-item'>
+    <navigator wx:for="{{itemList}}" wx:key="{{item.id}}" data-id="{{item.id}}" url='/pages/goods/goods'>
+      <image src='{{item.list_pic_url}}'></image>
+      <view class='item-txt'>
+        <text class='item-title'>{{item.name}}</text>
+        <text class='item-price'>￥{{item.retail_price}}</text>
+      </view>
+    </navigator>
+  </view>
+</view>

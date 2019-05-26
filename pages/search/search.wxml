@@ -1,24 +1,30 @@
 <view class='container'>
   <view class='search'>
     <image class='icon' src='http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/search2-2fb94833aa.png'></image>
-    <input placeholder='{{defaultKeyword.keyword}}'></input>
-    <navigator>
+    <input placeholder='{{defaultKeyword.keyword}}' value='{{inputValue}}' focus='{{true}}' confirm-type='search' bindconfirm='searchGoods'></input>
+    <navigator bindtap='cancel'>
       <text>取消</text>
     </navigator>
   </view>
-  <view class='search-history' wx:if='{{historyKeywordList.length !== 0}}'>
-    <view class='history-box'>
-      <text class='title'>历史记录</text>
-      <image src='http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/del1-93f0a4add4.png'></image>
+  <view class='search-txt' wx:if="{{isShow}}">
+    <view class='search-history' wx:if='{{historyKeywordList.length !== 0}}'>
+      <view class='history-box'>
+        <text class='title'>历史记录</text>
+        <image src='http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/del1-93f0a4add4.png'></image>
+      </view>
+      <view class='history-result'>
+        <view wx:for="{{historyKeywordList}}" wx:key="{{item}}">{{item}}</view>
+      </view>
     </view>
-    <view class='history-result'>
-      <view wx:for="{{historyKeywordList}}" wx:key="{{item.keyword}}">{{item.keyword}}</view>
+    <view class='search-hot'>
+      <text class='title'>热门搜索</text>
+      <view class='history-result'>
+        <view wx:for="{{hotKeywordList}}" wx:key="{{item.keyword}}" class="{{item.is_hot === 1 ? 'hot-search' : ''}}">{{item.keyword}}</view>
+      </view>
     </view>
   </view>
-  <view class='search-hot'>
-    <text class='title'>热门搜索</text>
-    <view class='history-result'>
-      <view wx:for="{{hotKeywordList}}" wx:key="{{item.keyword}}" class="{{item.is_hot === 1 ? 'hot-search' : ''}}">{{item.keyword}}</view>
-    </view>
+  <view class='search-result' wx:if="{{!isShow}}">
+    <image src='http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/noSearchResult-7572a94f32.png'></image>
+    <text>您寻找的商品还未上架</text>
   </view>
 </view>

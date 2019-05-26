@@ -1,0 +1,122 @@
+.fixed-header {
+  height: 100rpx;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  background-color: #fff;
+  bottom: 0;
+  border: 1rpx solid #eee;
+}
+.fixed-header image {
+  width: 44rpx;
+  height: 44rpx;
+}
+.fixed-header view {
+  line-height: 100rpx;
+  vertical-align: middle;
+  text-align: center;
+}
+.fixed-header .collect,
+.fixed-header .shopcar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 162rpx;
+  border-right: 1rpx solid #eee;
+}
+.fixed-header .start-pay,
+.fixed-header .add-shopcar {
+  border-right: 1rpx solid #eee;
+  width: 211rpx;
+  font-size: 14px;
+}
+.fixed-header .add-shopcar {
+  border: 0;
+  background-color: #b4282d;
+  color: #fff;
+}
+/**/
+.container {
+  padding: 0 0 100rpx;
+}
+swiper,
+.swiper image {
+  height: 750rpx;
+  width: 750rpx;
+}
+.a-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+/* .usual-txt {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 72rpx;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  line-height: 72rpx;
+}
+.usual-txt text {
+  position: relative;
+  padding: 0 40rpx;
+}
+.usual-txt text::before {
+  content: "";
+  width: 8rpx;
+  height: 8rpx;
+  background-color: red;
+  position: absolute;
+  left: 20rpx;
+  top: 50%;
+  margin-top: -4rpx;
+  border-radius: 50%;
+} */
+.a-item-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #ccc;
+  background-color: #fff;
+}
+.a-item-header {
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 30rpx;
+}
+.a-item-home {
+  font-size: 12px;
+  color: #f7a551;
+  padding: 4rpx 10rpx;
+  border-radius: 8rpx;
+  border: 2rpx solid #f7a551;
+  margin: 20rpx;
+}
+.a-item-home::after {
+  content: "";
+  width: 10rpx;
+  height: 10rpx;
+  display: inline-block;
+  transform: rotate(45deg);
+  margin: 0 6rpx 0;
+  border: 2rpx solid #f7a551;
+  border-left: 2rpx solid transparent;
+  border-bottom: 2rpx solid transparent;
+}
+.select-page {
+  background-color: #fff;
+  width: 100%;
+  font-size: 15px;
+  position: relative;
+}
+.select-page text {
+  padding: 30rpx;
+  display: inline-block;
+}

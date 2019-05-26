@@ -1,0 +1,36 @@
+<view class='container'>
+  <view class='swiper'>
+    <swiper indicator-dots="{{ true }}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" circular="{{true}}">
+      <swiper-item wx:for="{{banner}}" wx:key="{{item.id}}">
+        <navigator>
+          <image src="{{item.image_url}}" class="slide-image"  lazy-load='{{true}}' mode='aspectFill'/>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class='a-item'>
+    <usual-txt></usual-txt>
+    <view class='a-item-txt'>
+      <text class='a-item-title'>母亲节礼物-舒适安睡组合</text>
+      <text class='a-item-header'>安心舒适是最好的礼物</text>
+      <text class='a-item-price price'>￥2599</text>
+      <navigator class='a-item-home'>Ralph Lauren制造商</navigator>
+    </view>
+    <view class='select-page'>
+      <text class='right'>请选择规格数量</text>
+    </view>
+  </view>
+  <view class='fixed-header'>
+    <view class='collect'><image src='../../static/images/icon_collect.png'></image></view>
+    <view class='shopcar'><image src='../../static/images/ic_menu_shoping_nor.png'></image></view>
+    <view class='start-pay'>立即购买</view>
+    <view class='add-shopcar'>加入购物车</view>
+  </view>
+  <view class='concat'>
+    <navigator>
+      <text>评价(88)</text>
+      <text>查看全部</text>
+    </navigator>
+    <view class='concat-body'></view>
+  </view>
+</view>
