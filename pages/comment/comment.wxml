@@ -1,0 +1,25 @@
+<view class='concat'>
+  <view class='header'>
+    <text class="{{isShow === 0 ? 'active' : ''}}" bindtap='changeAll'>全部({{allCount}})</text>
+    <text class="{{isShow === 1 ? 'active' : ''}}" bindtap='changeComment'>有图({{hasPicCount}})</text>
+  </view>
+  <!-- 显示全部评论 -->
+  <view class='concat-body' wx:if="{{isShow === 0}}" wx:for="{{commentList}}" wx:key="id">
+    <text class='time'>{{item.add_time}}</text>
+    <text class='content'>{{item.content}}</text>
+    <view class='photo'>
+      <image wx:for="{{item.pic_list}}" wx:key="id" src='{{item.pic_url}}' mode='aspectFill' data-url="{{item.pic_url}}" bindtap='showBig'></image>
+    </view>
+  </view>
+  <!-- 显示有图评论 -->
+  <view class='concat-body' wx:if="{{isShow === 1}}" wx:for="{{hasPicList}}" wx:key="id">
+    <text class='time'>{{item.add_time}}</text>
+    <text class='content'>{{item.content}}</text>
+    <view class='photo'>
+      <image wx:for="{{item.pic_list}}" wx:key="id" src='{{item.pic_url}}' data-url="{{item.pic_url}}" mode='aspectFill' bindtap='showBig'></image>
+    </view>
+  </view>
+  <view class='show-big' wx:if="{{isShowBig}}" bindtap='hideBig' catchtouchmove='{{true}}'>
+    <image src='{{showBig}}' mode='aspectFill'></image>
+  </view>
+</view>

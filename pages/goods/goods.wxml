@@ -1,9 +1,9 @@
 <view class='container'>
   <view class='swiper'>
     <swiper indicator-dots="{{ true }}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" circular="{{true}}">
-      <swiper-item wx:for="{{banner}}" wx:key="{{item.id}}">
+      <swiper-item wx:for="{{banner}}" wx:key="id">
         <navigator>
-          <image src="{{item.image_url}}" class="slide-image"  lazy-load='{{true}}' mode='aspectFill'/>
+          <image src="{{item.img_url}}" class="slide-image" lazy-load='{{true}}' mode='aspectFill' />
         </navigator>
       </swiper-item>
     </swiper>
@@ -11,26 +11,63 @@
   <view class='a-item'>
     <usual-txt></usual-txt>
     <view class='a-item-txt'>
-      <text class='a-item-title'>母亲节礼物-舒适安睡组合</text>
-      <text class='a-item-header'>安心舒适是最好的礼物</text>
-      <text class='a-item-price price'>￥2599</text>
-      <navigator class='a-item-home'>Ralph Lauren制造商</navigator>
+      <text class='a-item-title'>{{info.name}}</text>
+      <text class='a-item-header'>{{info.goods_brief}}</text>
+      <text class='a-item-price price'>￥{{info.retail_price}}</text>
+      <navigator class='a-item-home' wx:if="{{brand.name}}">{{brand.name}}</navigator>
     </view>
     <view class='select-page'>
       <text class='right'>请选择规格数量</text>
     </view>
   </view>
-  <view class='fixed-header'>
-    <view class='collect'><image src='../../static/images/icon_collect.png'></image></view>
-    <view class='shopcar'><image src='../../static/images/ic_menu_shoping_nor.png'></image></view>
-    <view class='start-pay'>立即购买</view>
-    <view class='add-shopcar'>加入购物车</view>
-  </view>
+
   <view class='concat'>
-    <navigator>
-      <text>评价(88)</text>
-      <text>查看全部</text>
+    <navigator url='/pages/comment/comment?valueId={{id}}&typeId=0' hover-class="none">
+      <text>评价({{comment.count}})</text>
+      <text class='right'>查看全部</text>
     </navigator>
-    <view class='concat-body'></view>
+    <view class='concat-body'>
+      <text class='time'>{{comment.data.add_time}}</text>
+      <text class='content'>{{comment.data.content}}</text>
+      <view class='photo'>
+        <image wx:for="{{comment.data.pic_list}}" wx:key="id" src='{{item.pic_url}}' mode='aspectFill'></image>
+      </view>
+    </view>
   </view>
+  <view class='goods-details'>
+    <text class='goods-details-title'>商品参数</text>
+    <view class='details-msg'>
+      <!-- <image wx:for="{{parameter}}" wx:key="*this" src="{{item}}"></image> -->
+    </view>
+  </view>
+  <view class='issue'>
+    <text class='title'>常见问题</text>
+    <view class='issue-box' wx:for="{{issue}}" wx:key="id">
+      <text class='issue-title'>{{item.question}}</text>
+      <text class='issue-response'>{{item.answer}}</text>
+    </view>
+  </view>
+  <view class='suggest'>
+    <text class='suggest-title'>大家都在看</text>
+    <view class='suggest-goods'>
+      <navigator wx:for="{{suggestList}}" wx:key="id" url='/pages/goods/goods?id={{item.id}}'>
+        <image src='{{item.list_pic_url}}'></image>
+        <text class='goods-title'>{{item.name}}</text>
+        <text class='price'>￥{{item.retail_price}}</text>
+      </navigator>
+    </view>
+  </view>
+  <text class='over'>到底啦</text>
+</view>
+
+<!-- 购物车部分 -->
+<view class='fixed-header'>
+  <view class='collect'>
+    <image src='../../static/images/icon_collect.png'></image>
+  </view>
+  <view class='shopcar'>
+    <image src='../../static/images/ic_menu_shoping_nor.png'></image>
+  </view>
+  <view class='start-pay'>立即购买</view>
+  <view class='add-shopcar'>加入购物车</view>
 </view>

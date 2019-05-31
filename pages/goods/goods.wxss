@@ -51,45 +51,20 @@ swiper,
   align-items: center;
   margin-bottom: 20rpx;
 }
-/* .usual-txt {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 72rpx;
-  font-size: 12px;
-  color: #666;
-  text-align: center;
-  line-height: 72rpx;
-}
-.usual-txt text {
-  position: relative;
-  padding: 0 40rpx;
-}
-.usual-txt text::before {
-  content: "";
-  width: 8rpx;
-  height: 8rpx;
-  background-color: red;
-  position: absolute;
-  left: 20rpx;
-  top: 50%;
-  margin-top: -4rpx;
-  border-radius: 50%;
-} */
 .a-item-txt {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 20rpx 0;
-  border-bottom: 1rpx solid #ccc;
+  padding: 60rpx 0;
+  border-bottom: 1rpx solid #eee;
   background-color: #fff;
 }
 .a-item-header {
   font-size: 12px;
   color: #aaa;
-  margin-bottom: 30rpx;
+  margin: 10rpx 0 30rpx;
 }
 .a-item-home {
   font-size: 12px;
@@ -119,4 +94,172 @@ swiper,
 .select-page text {
   padding: 30rpx;
   display: inline-block;
+}
+.select-page .right::after {
+  right: 60rpx;
+}
+.concat {
+  background-color: #fff;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+}
+.concat navigator {
+  display: flex;
+  align-items: center;
+  border-bottom: 4rpx solid #eee;
+  padding-bottom: 30rpx;
+}
+.concat navigator text:nth-of-type(1) {
+  flex-grow: 9;
+}
+.concat navigator text:nth-of-type(2) {
+  flex-grow: 1;
+  font-size: 14px;
+  column-count: #666;
+  padding-right: 20rpx;
+    position: relative;
+}
+.concat-body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30rpx;
+}
+.concat-body .time {
+  font-size: 12px;
+  text-align: right;
+  color: #999;
+}
+.concat-body .content {
+  font-size: 14px;
+  margin: 30rpx 0;
+}
+.concat-body .photo image {
+  width: 150rpx;
+  height: 150rpx;
+  margin-right: 10rpx;
+}
+.goods-details {
+  background-color: #fff;
+}
+.goods-details .goods-details-title {
+  padding: 30rpx;
+  display: inline-block;
+}
+.details-msg {
+  font-size: 0;
+}
+.details-msg image {
+  width: 100%;
+  height: 200rpx;
+}
+
+
+/* 常见问题 */
+.issue {
+  margin-top: 20rpx;
+  background-color: #fff;
+  padding: 30rpx;
+}
+.issue .title {
+  font-size: 15px;
+  color: #333;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.issue .title::before,
+.issue .title::after {
+  content: "——";
+  color: #ccc;
+  padding: 0 30rpx;
+}
+.issue-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30rpx;
+}
+.issue-title {
+  font-size: 14px;
+  color: #333;
+}
+.issue-title::before {
+  content: "";
+  display: inline-block;
+  width: 10rpx;
+  height: 10rpx;
+  background-color: #b4282d;
+  vertical-align: middle;
+  margin-right: 10rpx;
+  border-radius: 50%;
+}
+.issue-response {
+  font-size: 13px;
+  color: #666;
+  margin: 10rpx 0 10rpx 20rpx;
+}
+
+/* 大家都在看 */
+.suggest-title {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  padding: 40rpx 0;
+  background-color: #fff;
+}
+.suggest-title::before,
+.suggest-title::after {
+  content: "——";
+  color: #ccc;
+  padding: 0 30rpx;
+}
+.suggest-goods {
+  display: flex;
+  flex-wrap: wrap;
+}
+.suggest-goods navigator {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-top: 1rpx solid #eee;
+  position: relative;
+}
+.suggest-goods navigator image {
+  width: 310rpx;
+  height: 310rpx;
+}
+.suggest-goods navigator text:nth-of-type(1) {
+  font-size: 14px;
+}
+.suggest-goods navigator .price {
+  font-size: 15px;
+  padding-bottom: 10rpx; 
+}
+.suggest-goods navigator:nth-of-type(7),
+.suggest-goods navigator:nth-of-type(8) {
+  border-bottom: 1rpx solid #eee;
+}
+.suggest-goods navigator:nth-of-type(2n+1)::after {
+  content: "";
+  height: 100%;
+  width: 1rpx;
+  position: absolute;
+  right: 0;
+  background-color: #eee;
+}
+
+.over {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  padding: 40rpx 0;
+  background-color: #fff;
+}
+.over::before,
+.over::after {
+  content: "——";
+  color: #ccc;
+  padding: 0 30rpx;
 }

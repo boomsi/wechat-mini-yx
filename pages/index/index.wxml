@@ -15,7 +15,7 @@
     </swiper>
   </view>
   <view class='banner'>
-    <navigator class='banner-item' url='{{item.url}}' wx:for="{{channel}}" wx:key="item.id">
+    <navigator class='banner-item' url='{{item.url}}' wx:for="{{channel}}" wx:key="item.id" hover-class="none">
       <view>
         <image src='../../static/icon/jj.png'></image>
         <text>{{item.name}}</text>

@@ -7,4 +7,8 @@ module.exports = {
   goodsCount: ApiRootUrl + 'goods/count',
   goodsCategory: ApiRootUrl + 'goods/category',
   goodsList: ApiRootUrl + 'goods/list', 
+  goodsDetail: ApiRootUrl + 'goods/detail',
+  goodsRelated: ApiRootUrl + 'goods/related',
+  commentList: ApiRootUrl + 'comment/list',
+  commentCount: ApiRootUrl + 'comment/count',
 }

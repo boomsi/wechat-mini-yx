@@ -45,8 +45,8 @@
 				{
 					"id": 0,
 					"name": "5",
-					"pathName": "pages/goods/goods",
-					"query": "",
+					"pathName": "pages/comment/comment",
+					"query": "valueId=1181000&typeId=0",
 					"scene": null
 				}
 			]

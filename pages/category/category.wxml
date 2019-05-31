@@ -7,7 +7,7 @@
     <text class='title-small'>{{showList.front_desc}}</text>
   </view>
   <view class='goods-item'>
-    <navigator wx:for="{{itemList}}" wx:key="{{item.id}}" data-id="{{item.id}}" url='/pages/goods/goods'>
+    <navigator wx:for="{{itemList}}" wx:key="{{item.id}}" data-id="{{item.id}}" url='/pages/goods/goods?id={{item.id}}'>
       <image src='{{item.list_pic_url}}'></image>
       <view class='item-txt'>
         <text class='item-title'>{{item.name}}</text>

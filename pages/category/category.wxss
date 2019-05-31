@@ -1,9 +1,15 @@
+.container {
+  padding-top: 86rpx;
+}
 .header {
   height: 86rpx;
   background-color: #fff;
   border-top: 1rpx solid #ccc;
   overflow: hidden;
   white-space: nowrap;
+  position: fixed;
+  z-index: 999;
+  top: 0;
 }
 
 .header view {
