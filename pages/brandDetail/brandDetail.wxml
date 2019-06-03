@@ -1,0 +1,16 @@
+<view class='container'>
+  <view class='header'>
+    <view class='header-top'>
+      <image mode='aspectFill' src='{{brand.list_pic_url}}'></image>
+      <text>{{brand.name}}</text>
+    </view>
+    <view class='header-bottom'>{{brand.simple_desc}}</view>
+  </view>
+  <view class='goods-item'>
+    <navigator url='/pages/goods/goods?id={{item.id}}' wx:for="{{goodsList}}" wx:key="id">
+      <image src='{{item.list_pic_url}}'></image>
+      <text class='goods-title'>{{item.name}}</text>
+      <text class='price'>￥{{item.retail_price}}</text>
+    </navigator>
+  </view>
+</view>

@@ -27,7 +27,7 @@
       <text>品牌制造商直供</text>
     </view>
     <view class='txt-goods'>
-      <navigator class='a-select-item' wx:for="{{brand}}" wx:key="{{item.id}}">
+      <navigator url='/pages/brandDetail/brandDetail?id={{item.id}}' class='a-select-item' wx:for="{{brand}}" wx:key="{{item.id}}">
         <image src='{{ item.new_pic_url }}' lazy-load='{{true}}' mode='aspectFill'></image>
         <view class='mt'>
           <text class='brand'>{{ item.name }}</text>
@@ -41,7 +41,7 @@
       <text>周一周四·新品首发</text>
     </view>
     <view class='txt-goods'>
-      <navigator class='b-select-item' wx:for="{{newGoods}}" wx:key="{{item.id}}">
+      <navigator url='/pages/goods/goods?id={{item.id}}' class='b-select-item' wx:for="{{newGoods}}" wx:key="{{item.id}}">
         <image src='{{item.list_pic_url}}' lazy-load='{{true}}' mode='aspectFill'></image>
         <view class='mt'>
           <text class='b-select-name'>{{item.name}}</text>
@@ -55,7 +55,7 @@
       <text>人气推荐</text>
     </view>
     <view class='c-select-item'>
-      <navigator wx:for="{{hotGoods}}" wx:key="{{item.id}}">
+      <navigator url='/pages/goods/goods?id={{item.id}}' wx:for="{{hotGoods}}" wx:key="{{item.id}}">
         <image src='{{item.list_pic_url}}' lazy-load='{{true}}' mode='aspectFill'></image>
         <view class='c-select-text'>
           <text class='title'>{{item.name}}</text>
@@ -86,7 +86,7 @@
         <text>{{item.name}}</text>
       </view>
       <view class='e-select-item'>
-        <navigator wx:for="{{item.goodsList}}" wx:key="{{item.id}}">
+        <navigator url='/pages/goods/goods?id={{item.id}}' wx:for="{{item.goodsList}}" wx:key="{{item.id}}">
           <image src='{{item.list_pic_url}}' lazy-load='{{true}}' mode='aspectFill'></image>
           <view class='e-select-text'>
             <text class='title'>{{item.name}}</text>

@@ -28,3 +28,9 @@
 > 禁止页面滚动`catchtouchmove="{{true}}"`
 >
 > 点击navigator不出现背景色`hover-class="none"`
+
+### six
+
+基本完成
+
+> 循环渲染二级数据 wx:for-item=“xxx” 取用时xxx.xx

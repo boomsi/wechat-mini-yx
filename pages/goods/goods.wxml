@@ -14,14 +14,14 @@
       <text class='a-item-title'>{{info.name}}</text>
       <text class='a-item-header'>{{info.goods_brief}}</text>
       <text class='a-item-price price'>￥{{info.retail_price}}</text>
-      <navigator class='a-item-home' wx:if="{{brand.name}}">{{brand.name}}</navigator>
+      <navigator url='../brandDetail/brandDetail?id={{brand.brandId}}' class='a-item-home' wx:if="{{brand.name}}">{{brand.name}}</navigator>
     </view>
-    <view class='select-page'>
+    <view class='select-page' bindtap='changeAbout'>
       <text class='right'>请选择规格数量</text>
     </view>
   </view>
 
-  <view class='concat'>
+  <view class='concat' wx:if="{{comment.count !== 0}}">
     <navigator url='/pages/comment/comment?valueId={{id}}&typeId=0' hover-class="none">
       <text>评价({{comment.count}})</text>
       <text class='right'>查看全部</text>
@@ -36,6 +36,12 @@
   </view>
   <view class='goods-details'>
     <text class='goods-details-title'>商品参数</text>
+    <view class='goods-details-item'>
+      <view wx:for="{{attribute}}" wx:key="index">
+        <text>{{item.name}}</text>
+        <text>{{item.value}}</text>
+      </view>
+    </view>
     <view class='details-msg'>
       <!-- <image wx:for="{{parameter}}" wx:key="*this" src="{{item}}"></image> -->
     </view>
@@ -70,4 +76,34 @@
   </view>
   <view class='start-pay'>立即购买</view>
   <view class='add-shopcar'>加入购物车</view>
+</view>
+
+<!-- 选择商品规格 -->
+<view class='about-box' catchtouchmove='{{true}}' wx:if="{{openList}}">
+  <view class='goods-about'>
+    <view class='close-about' bindtap='changeAbout'>×</view>
+    <view class='about-a'>
+      <image mode='aspectFill' src='{{info.list_pic_url}}'></image>
+      <view class='about-a-detail'>
+        <text>价格：￥{{info.retail_price}}</text>
+        <text>已选择：<text wx:for="{{alreadyChoose}}" wx:key="index">{{item.value}}</text></text>
+      </view>
+    </view>
+
+    <view class='about-b' wx:for="{{aboutList}}" wx:key="specification_id">
+      <text>{{item.name}}</text>
+      <view class='b-content'>
+        <text wx:for="{{item.valueList}}" wx:for-item="valueList" wx:key="id" data-id="{{item.specification_id}}" data-value="{{valueList.value}}" bindtap='activeActive'>{{valueList.value}}</text>
+      </view>
+    </view>
+
+    <view class='about-c'>
+      <text>数量</text>
+      <view class='c-content'>
+        <view bindtap='lessCount'>－</view>
+        <input type='text' value='{{goodsCount}}'></input>
+        <view bindtap='addCount'>＋</view>
+      </view>
+    </view>
+  </view>
 </view>

@@ -8,7 +8,8 @@
     "pages/search/search",
     "pages/category/category",
     "pages/goods/goods",
-    "pages/comment/comment"
+    "pages/comment/comment",
+    "pages/brandDetail/brandDetail"
   ],
   "window": {
     "backgroundTextStyle": "dark",

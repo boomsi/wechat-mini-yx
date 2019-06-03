@@ -6,6 +6,7 @@
   background-color: #fff;
   bottom: 0;
   border: 1rpx solid #eee;
+  z-index: 2;
 }
 .fixed-header image {
   width: 44rpx;
@@ -138,6 +139,7 @@ swiper,
   height: 150rpx;
   margin-right: 10rpx;
 }
+/* 商品参数 */
 .goods-details {
   background-color: #fff;
 }
@@ -145,6 +147,29 @@ swiper,
   padding: 30rpx;
   display: inline-block;
 }
+
+.goods-details-item {
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx;
+}
+.goods-details-item view {
+  display: flex;
+  font-size: 14px;
+  /* flex-wrap: wrap; */
+  background-color: #f7f7f7;
+  padding: 8rpx 20rpx;
+  margin: 6rpx;
+}
+.goods-details-item view text:nth-of-type(1) {
+  line-height: 40rpx;
+  width: 150rpx;
+  color: #666;
+}
+.goods-details-item view text:nth-of-type(2) {
+  width: 500rpx;
+}
+
 .details-msg {
   font-size: 0;
 }
@@ -262,4 +287,98 @@ swiper,
   content: "——";
   color: #ccc;
   padding: 0 30rpx;
+}
+
+/* 选择商品规格 */
+.about-box {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.goods-about {
+  position: fixed;
+  background-color: #fff;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  padding: 30rpx;
+  padding-bottom: 130rpx;
+}
+
+.close-about {
+  position: absolute;
+  top: 0rpx;
+  right: 80rpx;
+  font-size: 28px;
+  color: #aaa;
+}
+
+.about-a {
+  display: flex;
+  align-items: center;
+}
+.about-a image {
+  width: 176rpx;
+  height: 176rpx;
+  border: 1rpx solid #eee;
+  margin-right: 30rpx;
+}
+.about-a-detail {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  width: 450rpx;
+}
+.about-a-detail text:nth-of-type(1) {
+  font-size: 16px;
+  margin-bottom: 10rpx;
+}
+.about-a-detail text:nth-of-type(2) text {
+  font-size: 13px;
+  padding: 0 10rpx;
+}
+.about-b {
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx 0;
+}
+.about-b >text {
+  font-size: 13px;
+}
+.b-content {
+  margin-top: 20rpx;
+}
+.b-content text{
+  border: 2rpx solid #666;
+  font-size: 12px;
+  padding: 10rpx 14rpx;
+  margin: 20rpx;
+}
+.about-c>text {
+  font-size: 13px;
+}
+.c-content {
+  display: flex;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.c-content input {
+  border: 1rpx solid #ccc;
+  height: 66rpx;
+  width: 134rpx;
+  border-left: 0;
+  border-right: 0;
+  text-align: center;
+  font-size: 14px;
+}
+.c-content view {
+  border: 1rpx solid #ccc;
+  width: 92rpx;
+  height: 66rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

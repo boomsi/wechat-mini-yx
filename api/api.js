@@ -11,4 +11,5 @@ module.exports = {
   goodsRelated: ApiRootUrl + 'goods/related',
   commentList: ApiRootUrl + 'comment/list',
   commentCount: ApiRootUrl + 'comment/count',
+  brandDetail: ApiRootUrl + 'brand/detail',
 }
